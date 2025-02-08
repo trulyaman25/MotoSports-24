@@ -1,4 +1,7 @@
 import { Route, BrowserRouter as Router, Routes, Link } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 import './App.css';
 import Navbar from './components/header/header';
 import Home from './components/home/home';
@@ -23,6 +26,8 @@ function App() {
 					<Route path="/contact" element={<Contact />} />
 				</Routes>
 			</Router>
+			<Analytics />
+			<SpeedInsights />
 			<Footer />
 		</>
 	);
